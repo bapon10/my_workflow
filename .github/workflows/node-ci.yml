@@ -1,6 +1,6 @@
 name: Node.js CI
 
-on: [push, pull_request]  # Runs on every push and PR
+on: [push, pull_request]
 
 jobs:
   build:
@@ -13,10 +13,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18  # Change to your Node.js version
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
+        working-directory: my_project  # Change this to your actual folder name
 
       - name: Run tests
         run: npm test
+        working-directory: my_workflow
+
