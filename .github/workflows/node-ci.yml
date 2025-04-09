@@ -17,9 +17,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: workflows  # Change this to your actual folder name
 
       - name: Run tests
         run: npm test
-        working-directory: workflows
 
